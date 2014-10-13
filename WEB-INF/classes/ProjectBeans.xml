@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean name="baseDAO" class="com.muteam.project.dao.BaseDAO" abstract="true">
+	    <property name="template" ref="hibernateTemplate" />
+	</bean>
+	
+	<bean name="personDAO" class="com.muteam.project.dao.PersonDAOImpl" parent="baseDAO">
+	</bean>
+	
+	<bean name="contactDAO" class="com.muteam.project.dao.ContactDAOImpl" parent="baseDAO">
+	</bean>
+	
+	<bean name="personFacade" parent="abstractTransactionProxy">
+	    <property name="target">
+		    <bean class="com.muteam.project.facade.PersonFacade">
+			    <property name="personDAO" ref="personDAO" />
+				<property name="contactDAO" ref="contactDAO" />
+				<property name="contactFacade" ref="contactFacade" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean name="contactFacade" parent="abstractTransactionProxy">
+	    <property name="target">
+		    <bean class="com.muteam.project.facade.ContactFacade">
+				<property name="personDAO" ref="personDAO" />
+				<property name="contactDAO" ref="contactDAO" />
+			</bean>
+		</property>
+	</bean>
+</beans>
+	    
