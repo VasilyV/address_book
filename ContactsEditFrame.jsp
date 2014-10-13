@@ -2,7 +2,7 @@
 <%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
 <html>
     <head>
-	<title>Фамилия Имя Отчество</title>
+	<title>Р¤Р°РјРёР»РёСЏ РРјСЏ РћС‚С‡РµСЃС‚РІРѕ</title>
     </head>
         <body>
 	    <form action='<c:url value="/editcontact.prj"/>' method="POST">
@@ -11,7 +11,7 @@
                     <input type="hidden" name="contactId" value="${contact.contactId}"/>
                         <table>
                             <tr>
-			        <td>Телефон</td>
+			        <td>РўРµР»РµС„РѕРЅ</td>
 			        <td><input type="text" name="phoneNumber" value="${contact.phoneNumber}"/></td>	
 	                    </tr>
 	                    <tr>
