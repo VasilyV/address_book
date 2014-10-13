@@ -2,7 +2,7 @@
 <%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
 <html>
     <head>
-	 <title>Редактирование персональных данных</title>
+	 <title>Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РґР°РЅРЅС‹С…</title>
     </head>
 	
 	<body>
@@ -11,15 +11,15 @@
                     <input type="hidden" name="personId" value="${person.personId}"/>
 		        <table>
 		            <tr>
-			        <td>Фамилия</td>
+			        <td>Р¤Р°РјРёР»РёСЏ</td>
 			        <td><input type="text" name="lastName" value="${person.lastName}"/></td>	
 			    </tr>
 			    <tr>
-			        <td>Имя</td>
+			        <td>РРјСЏ</td>
 		                <td><input type="text" name="firstName" value="${person.firstName}"/></td>
 			    </tr>
 			    <tr>
-			        <td>Отчество</td>
+			        <td>РћС‚С‡РµСЃС‚РІРѕ</td>
 			        <td><input type="text" name="middleName" value="${person.middleName}"/></td>
 			    </tr>
 		        </table>
