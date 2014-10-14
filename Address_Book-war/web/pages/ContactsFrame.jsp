@@ -2,7 +2,7 @@
 <%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
 <html>
     <head>
-	<title>РљРѕРЅС‚Р°РєС‚С‹</title>
+	<title>Контакты</title>
     </head>
 	
     <body>
