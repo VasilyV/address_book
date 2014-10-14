@@ -2,18 +2,18 @@
 <%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
 <html>
     <head>
-        <title>Адресная книга</title>
+        <title>РђРґСЂРµСЃРЅР°СЏ РєРЅРёРіР°</title>
     </head>
   
     <body>
         <form action='<c:url value="/person.prj"/>' method="POST">
-	        <b>Адресная книга</b><br/>
+	        <b>РђРґСЂРµСЃРЅР°СЏ РєРЅРёРіР°</b><br/>
 	        <table>
 	            <tr>
 		        <th>&nbsp;</th>
-		        <th>Фамилия</th>
-		        <th>Имя</th>
-		        <th>Отчество</th>
+		        <th>Р¤Р°РјРёР»РёСЏ</th>
+		        <th>РРјСЏ</th>
+		        <th>РћС‚С‡РµСЃС‚РІРѕ</th>
 		    </tr>
 		    <c:forEach var="person" items="${personsList}">
 		        <tr>
